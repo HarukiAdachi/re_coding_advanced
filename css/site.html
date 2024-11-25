@@ -8,54 +8,59 @@
     <link rel="stylesheet" href="./base.css" type="text/css">
     </head>
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module">
     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
     </script>
 
 <body>
+<header>
+    <div id="hooter">
 
-<div id="hooter">
-        <h1 id="sitename">Casteria</h1>
-        <menu id="menu1">
-            <label><button>Home</button></label>
-            <label><button>Food</button></label>
-            <label><button>Drink</button></label>
-            <label><button>お問合せ</button></label>
-            <input type="search" id="sarching1" name="search"/><button>search</button>
-        </menu>
-   
+        <!-- PC盤以外で使用するメニューの大箱 -->
+        <div class="bigbox">
+            <!-- モバイル版のレイアウト用箱 -->
+                <div class="red">
+                    <h1 id="sitename">Casteria</h1>
 
-    <!-- スマホ用のメニューバーと展開図 -->
-    <div class="l-sp-header_ham-menu">
-        <div class="menu-txt">MENU</div>
-        <div class="open-btn1"><span></span><span></span><span></span></div>
-      </div>
+                    <!-- ハンバーガーアイコン -->
+                    <div id="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
 
-        <!-- ナビの背景 -->
-    <div class="p-sp-nav-bg sp-nav-close"></div>
-    <!-- スマホ用グローバルナビ -->
-    <nav class="p-sp-nav" id="sp-g-nav">
-      <ul class="p-sp-nav_ul">
-        <li class="p-sp-nav_li">
-          <a href="#" class="p-sp-nav_a">HOME</a>
-        </li>
-        <li class="p-sp-nav_li">
-          <a href="#" class="p-sp-nav_a">Food</a>
-        </li>
-        <li class="p-sp-nav_li">
-          <a href="#" class="p-sp-nav_a">Drink</a>
-        </li>
-        <li class="p-sp-nav_li">
-          <a href="#" class="p-sp-nav_a">お問合せ</a>
-        </li>
-        <li class="p-sp-nav_li">
-            <input type="search" id="sarching2" name="search"/><button>search</button>
-        </li>
-      </ul>
-    </nav>
-</div>
+                    <!-- メディアクエリ版のメニュー/PC版は非表示にしている-->
+                     <div class="blue">
+                        <ul class="menu-list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Drink</a></li>
+                            <li><a href="#">問い合わせ</a></li>
+                        </ul>
+                     </div>
+
+        </div>
+    
+                        <!--メニュー要素として追加した箱-->
+                        <div class="menubox">
+                            <!--PC版のみのメニュー要素-->
+                            <menu id="menu1">
+                                <label class="label1"><a href="#">HOME</a></label>
+                                <label class="label1"><a href="#">Food</a></label>
+                                <label class="label1"><a href="#">Drink</a></label>
+                                <label class="label1"><a href="#">お問合せ</a></label>
+                                <input type="search" id="sarching1" name="search"/><button>search</button>
+                            </menu>
+                        </div>
+
+    </div>
+</header>
+
 
     <div class="swiper">
 
@@ -67,54 +72,62 @@
             <div class="swiper-slide"><img class="topfoods" src="../img/barista.jpg"></div>
         </div>
 
-        <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
-        <div class="swiper-scrollbar"></div>
+            <div class="swiper-scrollbar"></div>
     </div>
 
       
 
 <div id="withcorona"><h1 id="bigtop">新型コロナウィルスに対する取り組み部分</h1>
 
-<details>
-  <summary class="topic">衛生面に関して</summary>
-    <ul class="cir">
-        <li>マスクを着用しての接客</li>
-        <li>出勤前の検温の徹底</li>
-        <li>レジカウンターやドリンク受け渡し口等への飛沫防止カードの設置</li>
-        <li>より頻度の高い手洗いうがいの励行</li>
-        <li>テーブルにお客様用の消毒アルコールの設置</li>
-        <li>従業員間の距離確保のため、休憩や研修時の客席利用</li>
-    </ul>
-</details>
+    <div class="accordion">
+        <div class="panel">
+          <summary class="topic">衛生面に関して</summary>
+          <div class="inner">
+            <ul class="cir">
+              <li>マスクを着用しての接客</li>
+              <li>出勤前の検温の徹底</li>
+              <li>レジカウンターやドリンク受け渡し口等への飛沫防止カードの設置</li>
+              <li>より頻度の高い手洗いうがいの励行</li>
+              <li>テーブルにお客様用の消毒アルコールの設置</li>
+              <li>従業員間の距離確保のため、休憩や研修時の客席利用</li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="panel">
+          <summary class="topic">お客様へのご協力のお願い</summary>
+          <div class="inner">
+            <ul class="cir">
+              <li>店内では飲食時以外のマスク着用をお願い致します</li>
+              <li>入店時の手指の消毒にご協力ください</li>
+              <li>レジに並ぶ際、目安を示すフロアステッカーに沿った列感覚の確保にご協力ください</li>
+              <li>多数でお越しの際は、お1人がまとめてご注文願います(混雑時に入場制限をする場合がございます)</li>
+              <li>発熱や体調不良の際はご入店をお控えください</li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="panel">
+          <summary class="topic">サービスに関して</summary>
+            <div class="inner">
+                <ul class="cir">
+                <li>直接お渡しする商品の提供、金銭授受時にグローブの着用</li>
+                <li>ドリンクやフードのサンプリング中止</li>
+                <li>地域活動・イベントの中止</li>
+                <li>混雑時間帯の客席の譲り合いへのご協力お願いの実施</li>
+                <li>店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</li>
+                <li>混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</li>
+                </ul>
+            </div>
+        </div>
+     </div>   
 
-<details>
-    <summary class="topic">お客様へのご協力のお願い</summary>
-    <ul class="cir">
-        <li>店内では飲食時以外のマスク着用をお願い致します</li>
-        <li>入店時の手指の消毒にご協力ください</li>
-        <li>レジに並ぶ際、目安を示すフロアステッカーに沿った列感覚の確保にご協力ください</li>
-        <li>多数でお越しの際は、お1人がまとめてご注文願います(混雑時に入場制限をする場合がございます)</li>
-        <li>発熱や体調不良の際はご入店をお控えください</li>
-    </ul>
-</details>
-
-<details>
-    <summary class="topic">サービスに関して</summary>
-    <ul class="cir">
-        <li>直接お渡しする商品の提供、金銭授受時にグローブの着用</li>
-        <li>ドリンクやフードのサンプリング中止</li>
-        <li>地域活動・イベントの中止</li>
-        <li>混雑時間帯の客席の譲り合いへのご協力お願いの実施</li>
-        <li>店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</li>
-        <li>混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</li>
-    </ul>
-</details>
-
-<div class="blank"></div>
+     <div class="blank"></div>
 
 <div id="adjustment">
 
@@ -146,11 +159,12 @@
         <div id="locate">
             <div id="locindex">
                 <h3 id="address">Address</h3>
-                <p class="detailing">681 xxx Drive, xxxxx xxxx #01 - 06 000000<br><br>
-                Opening Hours</p>
-
+                  <p class="detailing">681 xxx Drive, xxxxx xxxx #01 - 06 000000<br><br>
+                  Opening Hours</p>
+                    <br>
                 <h3 id="times">Mondays-Friday: 10am - 9pm</h3>
                 <br>
+                
                 <p class="parttime">Saturdays,Sundays&Public Holidays:9am-9pm</p>
             </div>
                 <img id="coffee2" src="../img/barista.jpg">
@@ -194,6 +208,7 @@
         </menu>
     </div>
 
+</div>
     <script src="./animation.js"></script>
 </body>
 </html>
