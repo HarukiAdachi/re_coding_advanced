@@ -47,9 +47,7 @@ body.html{
 	position: relative;
 }
 
-
 .bigbox{
-	/* width: 100%; */
 	display:flex;
 	flex-direction: column;
 }
@@ -66,20 +64,8 @@ body.html{
 	margin-left: 1%;
 }
 
-.a {
+.color0{
 	color: blue;
-  }
-
-.a:link, a:visited, a:hover, a:active {
-	color: blue;
-  }
-
-#HOME1{
-	font-weight: bold;
-}
-
-#HOME2{
-	font-weight: bold;
 }
 
 /*これはメニュー用の配置調整枠 */
@@ -114,15 +100,14 @@ body.html{
 	border-radius: 1px;
   }
   
-
-  .menu-list li {
+.menu-list li {
 	padding: 10px 0;
 	border-bottom: 1px solid black;
 	color: black;
   }
 
-  /* PC用メニュー */
-  .menu1{
+/* PC用メニュー */
+.menu1{
 	display: flex;
   }
 
@@ -145,12 +130,11 @@ body.html{
 	}
 }
 
-
 /* 例のjs */
 .swiper {
 	width: 100%;
 	height: 600px;
-  }
+}
 
 /* swiper.jsで使った写真 */
 .topfoods{
@@ -187,38 +171,37 @@ margin-right: 5%;
 	margin-bottom: 5px;
 	border: none;
 	outline: none;
-  }
+}
   
-  /*非表示設定  */
-  .topic::-webkit-details-marker {
+/*非表示設定  */
+.topic::-webkit-details-marker {
 	display: none;
-  }
-  /* パネル */
-  .panel {
+}
+/* パネル */
+.panel {
 	display: block;
 	overflow: hidden;
-  }
+}
   
-  /* インナークラス */
-  .inner {
+/* インナークラス */
+.inner {
 	display: block;
 	max-height: 0;
 	overflow: hidden; 
 	transition: max-height 0.5s ease; 
-  }
+}
   
-  /* topicの下の小リスト */
-  .cir {
+/* topicの下の小リスト */
+.cir {
 	list-style-type: disc;
 	padding-left: 20px;
 	font-size: 1.2rem;
-  }
+}
   
-  /* クリックした後の色変化 */
-  .topic.active {
+/* クリックした後の色変化 */
+.topic.active {
 	background-color: #FF9E7C;
-  }
-
+}
 
 /* 箱 */
 .block{
@@ -248,8 +231,7 @@ margin-right: 5%;
 	width: 40%;
 	height: 400px;
 	object-fit: cover;
-	margin-left: 10%;
-	
+	margin-left: 10%;	
 }
 
 /* explanの説明 */
@@ -260,7 +242,6 @@ margin-right: 5%;
 	font-weight: 500;
 	max-width: 60%;   
 	text-align: justify;
-	
 }
 
 /* 文字通り住所 */
@@ -335,7 +316,6 @@ margin-right: 5%;
     background-position: center;
 }
 
-
 /* 店舗住所 */
 .loc{
 	text-align: center;
@@ -351,6 +331,10 @@ margin-right: 5%;
 	justify-content: center;
 	align-items: center;
 } 
+
+.color1{
+	color: black;
+}
 
 @media screen and (max-width: 768px) {
 	
@@ -426,18 +410,15 @@ margin-right: 5%;
 	.explan {
 		flex-direction: column;
 		text-align: center;
-	  }
-	
-	  /* 説明 */
-	.index1{
-    font-size: 1rem;
-    margin: 10px auto; 
-    line-height: 1.6; 
-    max-width: 600px; 
 	}
-
-
-
+	
+	/* 説明 */
+	.index1{
+    	font-size: 1rem;
+    	margin: 10px auto; 
+    	line-height: 1.6; 
+    	max-width: 600px; 
+	}
 
 	#locate {
 		width: 80%;
@@ -483,10 +464,10 @@ margin-right: 5%;
 
 }
 
-	  @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
 
-		/* 他店舗非表示 */
-		#lct{
-		display: none;
-		}
-	  }
+	/* 他店舗非表示 */
+	#lct{
+	display: none;
+	}
+}
